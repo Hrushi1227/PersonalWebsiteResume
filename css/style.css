@@ -21,7 +21,8 @@ a{
 	background-position: right bottom;
 	background-repeat: no-repeat;
 	background-image: url("../images/bg.png");
-	background-color: #edf1fd;
+	background-color: rgb(83, 69, 119);
+
 }
 nav{
 	display:flex;
@@ -138,7 +139,7 @@ nav{
 
 }
 .social i{
-	color:rgba(18,17,17,0.40);
+	color:red;
 	font-size: 14px;
 }
 .social a:hover i{
