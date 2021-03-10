@@ -218,7 +218,7 @@
 
 	</section>
 
-	<script type="text/javascript" src="js/JQuery3.3.1.js"></script>
+	<!--<script type="text/javascript" src="js/JQuery3.3.1.js"></script>
 	<script type="text/javascript">
 
 		/*Responsive Navigation*/
@@ -232,6 +232,20 @@
 			})
 		});
 
+	</script>-->
+	<script>
+		let ul = document.querySelector('ul');
+		let li = document.querySelectorAll('li');
+
+
+		li.forEach(el => {
+			el.addEventListener('click', function () {
+
+				ul.querySelector('.active').classList.remove('active')
+				el.classList.add('active');
+			})
+
+		})
 	</script>
 </body>
 
