@@ -1,0 +1,100 @@
+/* src/components/Home.css */
+
+.home {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.name-section {
+  margin-bottom: 30px;
+}
+
+.name {
+  margin: 0;
+  text-align: left;
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: nameAnimation 1s ease-in;
+}
+
+.designation {
+  font-size: 1.5em;
+  color: #666;
+  margin-top: 10px;
+}
+
+.content {
+  margin-top: 30px;
+}
+
+.welcome {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.skills {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.skills-heading {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #333;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.skills-list li {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.skills-list li:before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: #007bff; /* Use a trendy color for bullet points */
+}
+
+.footer-section {
+  background-color: #f8f9fa; /* Set your desired background color */
+  padding: 50px 0;
+  text-align: center;
+  color: #666;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Change color on hover */
+}
