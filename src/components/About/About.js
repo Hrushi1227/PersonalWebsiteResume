@@ -1,13 +1,37 @@
 // src/components/About.js
-
-import React from "react";
-import "./About.css"; // Import CSS file for the About component
+import React, { useState, useEffect } from "react";
+import "./About.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
+  const [loading, setLoading] = useState(true); // State to manage loading state
+
+  // Simulating data loading with useEffect
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false); // Set loading to false after a timeout (simulating data load)
+    }, 2000); // Simulate 2 seconds loading time
+  }, []);
+
   return (
-    <section className="about">
-      <h2>About Section</h2>
-      <p>About content goes here. [In Progress]</p>
+    <section id="about" className="about">
+      <h2>About Us</h2>
+      {loading ? (
+        <div className="loading">
+          <FontAwesomeIcon icon={faSpinner} spin />
+          <span>Loading...</span>
+        </div>
+      ) : (
+        <div className="content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      )}
     </section>
   );
 };
