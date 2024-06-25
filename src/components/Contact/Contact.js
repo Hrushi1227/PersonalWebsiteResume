@@ -5,7 +5,8 @@ const Contact = () => (
   <section id="contact">
     <h2>Contact</h2>
     <p>
-      You can reach me at <a href="mailto:[your email]">[your email]</a>
+      You can reach me at{" "}
+      <a href="mailto:rushi.ghatol1227@gmail.com">rushi.ghatol1227@gmail.com</a>
     </p>
   </section>
 );
