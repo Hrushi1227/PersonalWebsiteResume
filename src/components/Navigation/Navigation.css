@@ -12,6 +12,7 @@
   margin: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .nav-item {
@@ -33,4 +34,20 @@
 .active {
   font-weight: bold;
   color: #ffc107; /* Active link color */
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center;
+  }
+
+  .nav-item {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add bottom margin */
+  }
+
+  .nav-link {
+    font-size: 1em; /* Reduce font size */
+  }
 }
