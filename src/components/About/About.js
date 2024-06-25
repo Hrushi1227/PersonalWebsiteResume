@@ -16,7 +16,7 @@ const About = () => {
 
   return (
     <section id="about" className="about">
-      <h2>About Us</h2>
+      <h2>About Me</h2>
       {loading ? (
         <div className="loading">
           <FontAwesomeIcon icon={faSpinner} spin />
@@ -25,10 +25,8 @@ const About = () => {
       ) : (
         <div className="content">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Currently updating this section. Please check back later for more
+            information.
           </p>
         </div>
       )}
