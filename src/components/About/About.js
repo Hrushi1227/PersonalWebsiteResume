@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section className="about">
       <h2>About Section</h2>
-      <p>About content goes here.</p>
+      <p>About content goes here. [In Progress]</p>
     </section>
   );
 };
