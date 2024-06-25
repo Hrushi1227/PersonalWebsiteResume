@@ -148,24 +148,6 @@ const Home = () => {
   return (
     <div className="section">
       <div className="home">
-        <section className="code-section">
-          <h3>Run JavaScript Code</h3>
-          <div className="dropdown-container">
-            <select onChange={handleDropdownChange}>
-              <option value="">Select a code snippet</option>
-              {Object.keys(functionsMap).map((functionName) => (
-                <option key={functionName} value={functionName}>
-                  {functionName}
-                </option>
-              ))}
-            </select>
-            <button onClick={runCode}>Run Code</button>
-          </div>
-          <div className="output-container">
-            <h4>Output:</h4>
-            <pre>{output}</pre>
-          </div>
-        </section>
         <div className="name-section">
           <h1 className="name">Rushikesh S. Ghatol</h1>
           <h2 className="designation">Senior Software Developer</h2>
@@ -189,6 +171,24 @@ const Home = () => {
             </ul>
           </div>
         </div>
+        <section className="code-section">
+          <h3>Run JavaScript Code</h3>
+          <div className="dropdown-container">
+            <select onChange={handleDropdownChange}>
+              <option value="">Select a code snippet</option>
+              {Object.keys(functionsMap).map((functionName) => (
+                <option key={functionName} value={functionName}>
+                  {functionName}
+                </option>
+              ))}
+            </select>
+            <button onClick={runCode}>Run Code</button>
+          </div>
+          <div className="output-container">
+            <h4>Output:</h4>
+            <pre>{output}</pre>
+          </div>
+        </section>
       </div>
       <section className="footer-section section">
         <div className="footer">
