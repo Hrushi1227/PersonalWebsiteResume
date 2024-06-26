@@ -1,9 +1,9 @@
-/* src/components/Navigation.css */
-
+/* General Styles */
 .navbar {
   background-color: #333;
   padding: 10px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .nav-menu {
@@ -13,6 +13,13 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  transition: max-height 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.nav-menu.open {
+  max-height: 500px; /* Arbitrary large value to show menu */
 }
 
 .nav-item {
@@ -36,6 +43,15 @@
   color: #ffc107; /* Active link color */
 }
 
+/* Burger Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Media query for smaller screens */
 @media (max-width: 768px) {
   .nav-menu {
     flex-direction: column; /* Stack items vertically on smaller screens */
@@ -49,5 +65,9 @@
 
   .nav-link {
     font-size: 1em; /* Reduce font size */
+  }
+
+  .menu-icon {
+    display: block; /* Show menu icon */
   }
 }
