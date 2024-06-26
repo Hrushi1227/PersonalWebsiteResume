@@ -1,73 +1,81 @@
-/* General Styles */
+/* Basic styles for the navbar */
 .navbar {
-  background-color: #333;
-  padding: 10px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
-.nav-menu {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-  transition: max-height 0.3s ease;
-  max-height: 0;
-  overflow: hidden;
-}
-
-.nav-menu.open {
-  max-height: 500px; /* Arbitrary large value to show menu */
-}
-
-.nav-item {
-  margin-right: 15px;
-}
-
-.nav-link {
-  text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
   color: #fff;
-  font-size: 1.2em;
-  padding: 10px 15px;
-  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1000; /* Ensure navbar is above other content */
 }
 
-.nav-link:hover {
-  color: #ffc107; /* Change color on hover */
-}
-
-.active {
-  font-weight: bold;
-  color: #ffc107; /* Active link color */
-}
-
-/* Burger Menu Icon */
 .menu-icon {
   display: none;
-  font-size: 1.5em;
-  color: #fff;
+  font-size: 24px;
   cursor: pointer;
 }
 
-/* Media query for smaller screens */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
   .nav-menu {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    align-items: center;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: relative;
+    padding: 0;
+  }
+
+  .nav-menu.open {
+    display: flex;
   }
 
   .nav-item {
-    margin-right: 0; /* Remove right margin */
-    margin-bottom: 10px; /* Add bottom margin */
+    margin: 0;
+    border-top: 1px solid #444;
   }
 
+  .nav-item:first-child {
+    border-top: none;
+  }
+
+  /* Adjust the padding to make sure it looks good on mobile */
   .nav-link {
-    font-size: 1em; /* Reduce font size */
+    padding: 15px 20px;
   }
+}
 
-  .menu-icon {
-    display: block; /* Show menu icon */
+/* Ensure the rest of the content shifts down when the menu opens */
+@media (max-width: 768px) {
+  .nav-menu.open + .content {
+    margin-top: 100px; /* Adjust this value based on the number of menu items */
   }
 }

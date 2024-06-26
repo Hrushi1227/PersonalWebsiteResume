@@ -18,17 +18,33 @@ const Navigation = () => {
       </div>
       <ul className={`nav-menu ${menuOpen ? "open" : ""}`}>
         <li className="nav-item">
-          <NavLink to="/" exact className="nav-link" activeClassName="active">
+          <NavLink
+            to="/"
+            exact
+            className="nav-link"
+            activeClassName="active"
+            onClick={toggleMenu}
+          >
             Home
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/about" className="nav-link" activeClassName="active">
+          <NavLink
+            to="/about"
+            className="nav-link"
+            activeClassName="active"
+            onClick={toggleMenu}
+          >
             About
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink to="/blog" className="nav-link" activeClassName="active">
+          <NavLink
+            to="/blog"
+            className="nav-link"
+            activeClassName="active"
+            onClick={toggleMenu}
+          >
             Blog
           </NavLink>
         </li>
@@ -38,16 +54,24 @@ const Navigation = () => {
             className="nav-link"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={toggleMenu}
           >
             Resume
           </a>
         </li>
         <li className="nav-item">
-          <NavLink to="/contact" className="nav-link" activeClassName="active">
+          <NavLink
+            to="/contact"
+            className="nav-link"
+            activeClassName="active"
+            onClick={toggleMenu}
+          >
             Contact
           </NavLink>
         </li>
       </ul>
+      {/* Add an empty div with class "content" to allow shifting */}
+      <div className="content"></div>
     </nav>
   );
 };
