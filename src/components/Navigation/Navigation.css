@@ -1,18 +1,21 @@
 /* Basic styles for the navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Space between for left and right buttons */
   align-items: center;
-  padding: 10px 20px;
+  padding: 5px 15px; /* Reduced padding */
   background-color: #333;
   color: #fff;
   position: relative;
   z-index: 1000; /* Ensure navbar is above other content */
+  border-radius: 10px; /* Rounded corners */
+  margin: 10px 20px; /* Margins on both sides */
+  transition: all 0.3s ease-in-out; /* Transition for smooth effect */
 }
 
 .menu-icon {
   display: none;
-  font-size: 24px;
+  font-size: 20px; /* Reduced font size */
   cursor: pointer;
 }
 
@@ -24,19 +27,41 @@
 }
 
 .nav-item {
-  margin: 0 15px;
+  margin: 0 10px; /* Reduced margin */
 }
 
 .nav-link {
   color: #fff;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 8px 12px; /* Reduced padding */
   display: block;
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.nav-link:hover {
+  background-color: #555; /* Background color on hover */
+  color: #ddd; /* Text color on hover */
 }
 
 .nav-link.active {
   font-weight: bold;
   border-bottom: 2px solid #fff;
+}
+
+/* Button styles */
+.nav-button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #777;
+  color: #fff;
 }
 
 /* Mobile styles */
@@ -78,4 +103,18 @@
   .nav-menu.open + .content {
     margin-top: 100px; /* Adjust this value based on the number of menu items */
   }
+}
+
+/* Additional styles to handle margin and rounded borders */
+.navbar-container {
+  margin: 0 20px; /* Adjust margin on both sides */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensures the rounded corners display correctly */
+  background-color: #333; /* Set background color for the container */
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
 }
