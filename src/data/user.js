@@ -13,7 +13,7 @@ const INFO = {
 	},
 
 	homepage: {
-		title: "React UI Front-End Developer",
+		title: "React UI Front-End Developer ~ Rushikesh G.",
 		description:
 			"I am a senior React UI developer with expertise in React and Redux. I have extensive experience in building responsive, dynamic, and high-performance user interfaces using modern JavaScript frameworks and libraries. I excel at creating intuitive and visually appealing user experiences, ensuring code quality, and following best practices and industry standards. I am passionate about solving complex frontend challenges and continuously learning new technologies and techniques. I thrive on collaborating with cross-functional teams to deliver robust and user-centric applications. I am always seeking new challenges and opportunities to further grow and refine my skills as a developer.",
 	},
