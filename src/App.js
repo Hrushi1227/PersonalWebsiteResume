@@ -1,29 +1,38 @@
-// src/App.js
+import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import ReactGA from "react-ga4";
 
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Update the import statement
-import Navigation from "./components/Navigation/Navigation";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Blog from "./components/Blog/Blog";
-import Resume from "./components/Resume/Resume";
-import Contact from "./components/Contact/Contact";
+import Homepage from "./pages/homepage";
+import About from "./pages/about";
+import Projects from "./pages/projects";
+import Articles from "./pages/articles";
+import ReadArticle from "./pages/readArticle";
+import Contact from "./pages/contact";
+import Notfound from "./pages/404";
 
-const App = () => {
-  return (
-    <Router>
-      <div className="app">
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </div>
-    </Router>
-  );
-};
+import { TRACKING_ID } from "./data/tracking";
+import "./app.css";
+
+function App() {
+	useEffect(() => {
+		if (TRACKING_ID !== "") {
+			ReactGA.initialize(TRACKING_ID);
+		}
+	}, []);
+
+	return (
+		<div className="App">
+			<Routes>
+				<Route path="/" element={<Homepage />} />
+				<Route path="/about" element={<About />} />
+				<Route path="/projects" element={<Projects />} />
+				<Route path="/articles" element={<Articles />} />
+				<Route path="/article/:slug" element={<ReadArticle />} />
+				<Route path="/contact" element={<Contact />} />
+				<Route path="*" element={<Notfound />} />
+			</Routes>
+		</div>
+	);
+}
 
 export default App;
