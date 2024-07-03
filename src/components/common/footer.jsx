@@ -29,7 +29,7 @@ const Footer = () => {
 
 				<div className="footer-credits">
 					<div className="footer-credits-text">
-						© 2023 rushi.ghatol1227@gmail.com.dev. All Rights Reserved.
+						©2023 Rushikesh G. All Rights Reserved.
 					</div>
 				</div>
 			</div>

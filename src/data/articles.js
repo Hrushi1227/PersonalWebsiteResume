@@ -2,15 +2,16 @@ import React from "react";
 
 function article_1() {
 	return {
-		date: "7 May 2023",
-		title: "The Benefits of Cloud Computing",
+		date: "1 Jan 2024",
+		title: "The Benefits of HTML, CSS, and JavaScript",
 		description:
-			"Cloud computing offers a range of benefits, including cost savings and increased flexibility. Find out why more businesses are turning to the cloud.",
+			"HTML, CSS, and JavaScript form the core technologies of web development, offering versatility, interactivity, and the ability to create engaging user interfaces. Explore why these technologies are essential for building modern web applications.",
 		keywords: [
-			"The Benefits of Cloud Computing",
-			"rushi.ghatol1227@gmail.com",
-			"rushi.ghatol1227@gmail.com N",
-			"rushi.ghatol1227@gmail.com ",
+			"HTML",
+			"CSS",
+			"JavaScript",
+			"Web Development",
+			"Frontend Technologies",
 		],
 		style: `
 				.article-content {
@@ -18,7 +19,7 @@ function article_1() {
 					flex-direction: column;
 					align-items: center;
 				}
-
+	
 				.randImage {
 					align-self: center;
 					outline: 2px solid red;
@@ -27,11 +28,22 @@ function article_1() {
 		body: (
 			<React.Fragment>
 				<div className="article-content">
-					<div className="paragraph">Content of article 1</div>
+					<div className="paragraph">
+						HTML, CSS, and JavaScript form the core technologies of
+						web development, offering versatility, interactivity,
+						and the ability to create engaging user interfaces.
+						Explore why these technologies are essential for
+						building modern web applications.
+					</div>
 					<img
-						src="https://picsum.photos/200/300"
-						alt="random"
+						src="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png"
+						alt="HTML logo"
 						className="randImage"
+						style={{
+							width: "150px",
+							height: "auto",
+							margin: "40px",
+						}} // Adjust width and maintain aspect ratio
 					/>
 				</div>
 			</React.Fragment>
@@ -41,20 +53,38 @@ function article_1() {
 
 function article_2() {
 	return {
-		date: "7 May 2023",
-		title: "Artificial Intelligence in Healthcare",
+		date: "1 Jan 2024",
+		title: "React-Redux Architecture and Its Benefits",
 		description:
-			"AI is transforming the healthcare industry, from improving patient outcomes to streamlining operations. Discover the latest applications of this game-changing technology.",
+			"Redux architecture offers a range of benefits, including predictable state management, centralized data storage, and easier debugging. Find out why more developers are turning to Redux for managing complex applications.",
 		style: ``,
 		keywords: [
-			"Artificial Intelligence in Healthcare",
+			"React-Redux Architecture",
+			"State Management",
+			"Frontend Development",
 			"rushi.ghatol1227@gmail.com",
-			"rushi.ghatol1227@gmail.com N",
-			"rushi.ghatol1227@gmail.com ",
 		],
 		body: (
 			<React.Fragment>
-				<h1>Content of article 2</h1>
+				<h1>Benefits of React-Redux Architecture</h1>
+				<p>
+					Redux architecture provides a predictable state management
+					solution that helps developers maintain and debug their
+					applications more efficiently. By centralizing data storage,
+					Redux makes it easier to manage the state of the entire
+					application in a single place, reducing complexity and
+					improving maintainability. The unidirectional data flow in
+					Redux also simplifies the process of tracking changes and
+					ensuring consistent state updates across the application.
+				</p>
+				<p>
+					React-Redux integration further enhances the development
+					experience by providing seamless state management within
+					React components. This integration allows developers to
+					leverage the strengths of both React and Redux, creating
+					scalable and maintainable applications with a clear
+					separation of concerns.
+				</p>
 			</React.Fragment>
 		),
 	};
