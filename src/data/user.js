@@ -43,7 +43,7 @@ const INFO = {
 			title: "Project 2",
 			description:
 				"A comprehensive project showcasing a scalable React-Redux architecture, demonstrating best practices in state management and component design.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
+			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
 			linkText: "View Project",
 			link: "https://github.com/Hrushi1227/Redux",
 		},
